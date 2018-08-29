@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE17AF1D213711FF007225EF /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF1C213711FF007225EF /* FancyView.swift */; };
+		AE17AF2021371326007225EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF1F21371326007225EF /* Constants.swift */; };
+		AE17AF222137163E007225EF /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF212137163E007225EF /* RoundBtn.swift */; };
+		AE17AF2421371830007225EF /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF2321371830007225EF /* FancyField.swift */; };
+		AE17AF2621371A40007225EF /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF2521371A40007225EF /* FancyButton.swift */; };
 		AEC42F962135C5E2007C8ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC42F952135C5E2007C8ACE /* AppDelegate.swift */; };
 		AEC42F982135C5E2007C8ACE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC42F972135C5E2007C8ACE /* SignInVC.swift */; };
 		AEC42F9B2135C5E2007C8ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC42F992135C5E2007C8ACE /* Main.storyboard */; };
@@ -18,6 +23,11 @@
 
 /* Begin PBXFileReference section */
 		0208B5B2F38A726F51ED3C82 /* Pods_Devslopes_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Devslopes_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE17AF1C213711FF007225EF /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		AE17AF1F21371326007225EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AE17AF212137163E007225EF /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
+		AE17AF2321371830007225EF /* FancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		AE17AF2521371A40007225EF /* FancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		AEC42F922135C5E2007C8ACE /* Devslopes-Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Devslopes-Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC42F952135C5E2007C8ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEC42F972135C5E2007C8ACE /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -59,6 +69,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE17AF1E213712D5007225EF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AE17AF1F21371326007225EF /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		AEC42F892135C5E2007C8ACE = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +98,7 @@
 		AEC42F942135C5E2007C8ACE /* Devslopes-Social */ = {
 			isa = PBXGroup;
 			children = (
+				AE17AF1E213712D5007225EF /* Utilities */,
 				AEC42FA92135C646007C8ACE /* Model */,
 				AEC42FA82135C640007C8ACE /* View */,
 				AEC42FA72135C631007C8ACE /* Controller */,
@@ -104,6 +123,10 @@
 		AEC42FA82135C640007C8ACE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AE17AF1C213711FF007225EF /* FancyView.swift */,
+				AE17AF212137163E007225EF /* RoundBtn.swift */,
+				AE17AF2321371830007225EF /* FancyField.swift */,
+				AE17AF2521371A40007225EF /* FancyButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,8 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE17AF2421371830007225EF /* FancyField.swift in Sources */,
 				AEC42F982135C5E2007C8ACE /* SignInVC.swift in Sources */,
+				AE17AF222137163E007225EF /* RoundBtn.swift in Sources */,
+				AE17AF2621371A40007225EF /* FancyButton.swift in Sources */,
 				AEC42F962135C5E2007C8ACE /* AppDelegate.swift in Sources */,
+				AE17AF1D213711FF007225EF /* FancyView.swift in Sources */,
+				AE17AF2021371326007225EF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
