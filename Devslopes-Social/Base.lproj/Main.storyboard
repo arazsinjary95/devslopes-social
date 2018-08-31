@@ -219,15 +219,15 @@
                                     <constraint firstItem="f8s-ZM-WY3" firstAttribute="leading" secondItem="wM6-Fm-kY3" secondAttribute="trailing" constant="8" id="zYK-of-xDv"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7dG-dM-ZeM">
-                                <rect key="frame" x="0.0" y="138" width="375" height="529"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7dG-dM-ZeM">
+                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="445" id="VCn-1o-qb3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="445" id="VCn-1o-qb3" customClass="PostCell" customModule="Devslopes_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="445"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VCn-1o-qb3" id="hwm-xk-GpB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="444.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="445"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0f-9l-LxQ">
@@ -254,9 +254,9 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="o0d-4B-KTk">
-                                                            <rect key="frame" x="0.0" y="66" width="375" height="280"/>
+                                                            <rect key="frame" x="0.0" y="107" width="375" height="290"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="280" id="e4b-zS-ppo"/>
+                                                                <constraint firstAttribute="height" constant="290" id="e4b-zS-ppo"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ydM-Tm-sMV">
@@ -277,30 +277,33 @@
                                                             </subviews>
                                                         </stackView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This photo from turkey i taked. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XdZ-Tn-AXV">
-                                                            <rect key="frame" x="8" y="346" width="359" height="53.5"/>
+                                                            <rect key="frame" x="8" y="66" width="359" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="wUY-hA-SRJ"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="o0d-4B-KTk" firstAttribute="top" secondItem="XdZ-Tn-AXV" secondAttribute="bottom" constant="11" id="82H-Yj-zGk"/>
                                                         <constraint firstAttribute="trailing" secondItem="XdZ-Tn-AXV" secondAttribute="trailing" constant="8" id="J7G-IN-lzb"/>
                                                         <constraint firstItem="XdZ-Tn-AXV" firstAttribute="leading" secondItem="Y0f-9l-LxQ" secondAttribute="leading" constant="8" id="K7T-3p-bNi"/>
                                                         <constraint firstItem="a2l-fN-TGn" firstAttribute="centerY" secondItem="Idg-Yv-CvK" secondAttribute="centerY" id="KOd-DJ-brg"/>
                                                         <constraint firstItem="znx-L4-gvn" firstAttribute="leading" secondItem="Y0f-9l-LxQ" secondAttribute="leading" constant="20" id="N8K-oT-9p6"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="a2l-fN-TGn" secondAttribute="trailing" constant="20" symbolic="YES" id="OgF-zl-tdL"/>
                                                         <constraint firstAttribute="bottom" secondItem="znx-L4-gvn" secondAttribute="bottom" constant="4" id="Pff-ab-rr3"/>
-                                                        <constraint firstItem="o0d-4B-KTk" firstAttribute="top" secondItem="Idg-Yv-CvK" secondAttribute="bottom" constant="8" id="Qap-Ux-beT"/>
                                                         <constraint firstItem="ydM-Tm-sMV" firstAttribute="centerY" secondItem="znx-L4-gvn" secondAttribute="centerY" id="UGC-d4-Bj7"/>
-                                                        <constraint firstItem="XdZ-Tn-AXV" firstAttribute="top" secondItem="o0d-4B-KTk" secondAttribute="bottom" id="Xw7-f9-25s"/>
                                                         <constraint firstItem="a2l-fN-TGn" firstAttribute="leading" secondItem="Idg-Yv-CvK" secondAttribute="trailing" constant="10" id="aHJ-Va-gyR"/>
                                                         <constraint firstAttribute="trailing" secondItem="ydM-Tm-sMV" secondAttribute="trailing" constant="20" id="amC-hf-W5Q"/>
                                                         <constraint firstItem="Idg-Yv-CvK" firstAttribute="leading" secondItem="Y0f-9l-LxQ" secondAttribute="leading" constant="8" id="d78-7s-vSi"/>
                                                         <constraint firstItem="o0d-4B-KTk" firstAttribute="leading" secondItem="Y0f-9l-LxQ" secondAttribute="leading" id="gII-Br-ItD"/>
-                                                        <constraint firstItem="znx-L4-gvn" firstAttribute="top" secondItem="XdZ-Tn-AXV" secondAttribute="bottom" id="kDX-5s-9Qn"/>
                                                         <constraint firstItem="Idg-Yv-CvK" firstAttribute="top" secondItem="Y0f-9l-LxQ" secondAttribute="top" constant="8" id="lSq-84-bL1"/>
+                                                        <constraint firstItem="znx-L4-gvn" firstAttribute="top" secondItem="o0d-4B-KTk" secondAttribute="bottom" constant="2.5" id="qmW-Wf-V3s"/>
                                                         <constraint firstAttribute="trailing" secondItem="o0d-4B-KTk" secondAttribute="trailing" id="uSQ-wl-cq6"/>
+                                                        <constraint firstItem="XdZ-Tn-AXV" firstAttribute="top" secondItem="Idg-Yv-CvK" secondAttribute="bottom" constant="8" id="vdl-Vl-6Lg"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -312,11 +315,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="caption" destination="XdZ-Tn-AXV" id="kNm-XF-nZj"/>
+                                            <outlet property="likesLbl" destination="LGg-YG-f3g" id="OQs-nZ-kUa"/>
+                                            <outlet property="postImg" destination="o0d-4B-KTk" id="ydL-WD-HLN"/>
+                                            <outlet property="profileImg" destination="Idg-Yv-CvK" id="OBO-9v-Rfh"/>
+                                            <outlet property="usernameLbl" destination="a2l-fN-TGn" id="AZn-qk-mH7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gj5-y1-qK8" firstAttribute="top" secondItem="abD-g6-4Wl" secondAttribute="bottom" id="AJw-T8-KYg"/>
                             <constraint firstItem="abD-g6-4Wl" firstAttribute="leading" secondItem="b9p-5R-6ma" secondAttribute="leading" id="BPg-V5-u54"/>
@@ -325,13 +335,14 @@
                             <constraint firstItem="abD-g6-4Wl" firstAttribute="trailing" secondItem="b9p-5R-6ma" secondAttribute="trailing" id="MzQ-Dm-5b9"/>
                             <constraint firstItem="abD-g6-4Wl" firstAttribute="top" secondItem="nBW-gg-M0R" secondAttribute="top" id="PkF-yn-Ytx"/>
                             <constraint firstItem="7dG-dM-ZeM" firstAttribute="trailing" secondItem="b9p-5R-6ma" secondAttribute="trailing" id="RKX-u2-TqY"/>
-                            <constraint firstItem="7dG-dM-ZeM" firstAttribute="top" secondItem="gj5-y1-qK8" secondAttribute="bottom" constant="8" id="hfn-Qk-LEO"/>
+                            <constraint firstItem="7dG-dM-ZeM" firstAttribute="top" secondItem="gj5-y1-qK8" secondAttribute="bottom" id="hfn-Qk-LEO"/>
                             <constraint firstItem="7dG-dM-ZeM" firstAttribute="leading" secondItem="b9p-5R-6ma" secondAttribute="leading" id="pH5-ph-CyH"/>
                             <constraint firstItem="b9p-5R-6ma" firstAttribute="trailing" secondItem="gj5-y1-qK8" secondAttribute="trailing" id="qIs-9y-jVu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b9p-5R-6ma"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="7dG-dM-ZeM" id="NHP-cP-MP7"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="zNL-L2-Bmk"/>
                     </connections>
                 </viewController>
