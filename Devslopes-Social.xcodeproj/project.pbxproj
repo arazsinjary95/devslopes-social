@@ -10,6 +10,7 @@
 		AE0AE69721391DD000426595 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE69621391DD000426595 /* FeedVC.swift */; };
 		AE0AE699213959A700426595 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE698213959A700426595 /* CircleView.swift */; };
 		AE0AE69B21396BCD00426595 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE69A21396BCD00426595 /* PostCell.swift */; };
+		AE0AE69E213982C800426595 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE69D213982C800426595 /* DataService.swift */; };
 		AE17AF1D213711FF007225EF /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF1C213711FF007225EF /* FancyView.swift */; };
 		AE17AF2021371326007225EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF1F21371326007225EF /* Constants.swift */; };
 		AE17AF222137163E007225EF /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF212137163E007225EF /* RoundBtn.swift */; };
@@ -29,6 +30,7 @@
 		AE0AE69621391DD000426595 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		AE0AE698213959A700426595 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		AE0AE69A21396BCD00426595 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		AE0AE69D213982C800426595 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AE17AF1C213711FF007225EF /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		AE17AF1F21371326007225EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AE17AF212137163E007225EF /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE0AE69C2139828200426595 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AE0AE69D213982C800426595 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		AE17AF1E213712D5007225EF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		AEC42F942135C5E2007C8ACE /* Devslopes-Social */ = {
 			isa = PBXGroup;
 			children = (
+				AE0AE69C2139828200426595 /* Services */,
 				AE17AF1E213712D5007225EF /* Utilities */,
 				AEC42FA92135C646007C8ACE /* Model */,
 				AEC42FA82135C640007C8ACE /* View */,
@@ -262,7 +273,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -273,7 +284,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -295,6 +306,7 @@
 				AEC42F982135C5E2007C8ACE /* SignInVC.swift in Sources */,
 				AE17AF222137163E007225EF /* RoundBtn.swift in Sources */,
 				AE17AF2621371A40007225EF /* FancyButton.swift in Sources */,
+				AE0AE69E213982C800426595 /* DataService.swift in Sources */,
 				AE0AE69721391DD000426595 /* FeedVC.swift in Sources */,
 				AEC42F962135C5E2007C8ACE /* AppDelegate.swift in Sources */,
 				AE17AF1D213711FF007225EF /* FancyView.swift in Sources */,
@@ -447,10 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3HSH3HTMU;
 				INFOPLIST_FILE = "Devslopes-Social/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arazsinjary.Devslopes-Social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -466,10 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3HSH3HTMU;
 				INFOPLIST_FILE = "Devslopes-Social/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arazsinjary.Devslopes-Social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
