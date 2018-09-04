@@ -71,28 +71,20 @@ class SignInVC: UIViewController {
                 
                 if error == nil {
                     print("Email: user authenticate with firebase")
-                    if user = user {
-                        let userData = ["provider": user.providerID]
-                        self.completeSignIn(id: user.uid, userData: userData)
+                    if let user = user {
+                        let userData = ["provider": user.user.providerID]
+                        self.completeSignIn(id: (user.user.uid), userData: userData )
                     }
-//                    if user != nil {
-//                        let userData = ["provider": user.providerID]
-//                        self.completeSignIn(id: "2", userData: userData)//for id i just put string
-//                    }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("Email: unable to authenticate with firebase using email")
                         } else {
                             print("Email: successfully authenticated with firebase")
-                            if user = user {
-                                let userData = ["provider": user.providerID]
-                                self.completeSignIn(id: user.uid, userData: userData)
+                            if let user = user {
+                                let userData = ["provider": user.user.providerID]
+                                self.completeSignIn(id: (user.user.uid), userData: userData )
                             }
-//                            if user != nil {
-//                                let userData = ["provider": user.providerID]
-//                                self.completeSignIn(id: "2", userData: userData)
-//                            }
                         }
                     })
                 }
