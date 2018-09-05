@@ -11,6 +11,7 @@
 		AE0AE699213959A700426595 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE698213959A700426595 /* CircleView.swift */; };
 		AE0AE69B21396BCD00426595 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE69A21396BCD00426595 /* PostCell.swift */; };
 		AE0AE69E213982C800426595 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE69D213982C800426595 /* DataService.swift */; };
+		AE0AE6A02140219100426595 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AE69F2140219100426595 /* Post.swift */; };
 		AE17AF1D213711FF007225EF /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF1C213711FF007225EF /* FancyView.swift */; };
 		AE17AF2021371326007225EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF1F21371326007225EF /* Constants.swift */; };
 		AE17AF222137163E007225EF /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17AF212137163E007225EF /* RoundBtn.swift */; };
@@ -31,6 +32,7 @@
 		AE0AE698213959A700426595 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		AE0AE69A21396BCD00426595 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		AE0AE69D213982C800426595 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		AE0AE69F2140219100426595 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AE17AF1C213711FF007225EF /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		AE17AF1F21371326007225EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AE17AF212137163E007225EF /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		AEC42FA92135C646007C8ACE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE0AE69F2140219100426595 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				AE0AE699213959A700426595 /* CircleView.swift in Sources */,
 				AE17AF2421371830007225EF /* FancyField.swift in Sources */,
 				AEC42F982135C5E2007C8ACE /* SignInVC.swift in Sources */,
+				AE0AE6A02140219100426595 /* Post.swift in Sources */,
 				AE17AF222137163E007225EF /* RoundBtn.swift in Sources */,
 				AE17AF2621371A40007225EF /* FancyButton.swift in Sources */,
 				AE0AE69E213982C800426595 /* DataService.swift in Sources */,
@@ -459,7 +463,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3HSH3HTMU;
 				INFOPLIST_FILE = "Devslopes-Social/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arazsinjary.Devslopes-Social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -475,7 +482,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3HSH3HTMU;
 				INFOPLIST_FILE = "Devslopes-Social/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arazsinjary.Devslopes-Social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
