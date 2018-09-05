@@ -57,7 +57,7 @@ class SignInVC: UIViewController {
             } else {
                 print("FB: Successfully authenticated with firebase")
                 if let user = user {
-                    let userData = ["provider": user.providerID]
+                    let userData = ["provider": credential.provider]
                     self.completeSignIn(id: user.uid, userData: userData)
                 }
             }

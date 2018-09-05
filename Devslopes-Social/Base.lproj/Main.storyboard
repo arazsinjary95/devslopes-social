@@ -150,27 +150,25 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuW-2i-mrV">
-                                        <rect key="frame" x="15" y="31" width="33" height="23"/>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="1QR-6C-v0v">
+                                        <rect key="frame" x="20" y="24" width="31" height="36"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="9tI-aZ-dTd"/>
-                                            <constraint firstAttribute="height" constant="23" id="MxI-Q2-bsu"/>
+                                            <constraint firstAttribute="width" constant="31" id="uQl-XQ-7i9"/>
+                                            <constraint firstAttribute="height" constant="36" id="v5q-Lz-t0L"/>
                                         </constraints>
-                                        <state key="normal" image="sign-out">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
                                         <connections>
-                                            <action selector="signOutBtnPressed:" destination="fWC-Ow-QGz" eventType="touchUpInside" id="D2i-31-9kU"/>
+                                            <outletCollection property="gestureRecognizers" destination="Bbh-bC-8vO" appends="YES" id="wN4-o3-gdA"/>
                                         </connections>
-                                    </button>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.08235294118" green="0.39607843139999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="1QR-6C-v0v" firstAttribute="leading" secondItem="abD-g6-4Wl" secondAttribute="leading" constant="20" id="0yo-0A-be7"/>
+                                    <constraint firstItem="hLO-rb-7ao" firstAttribute="centerY" secondItem="1QR-6C-v0v" secondAttribute="centerY" id="8gi-mi-h0V"/>
                                     <constraint firstAttribute="height" constant="65" id="MUR-jM-swT"/>
                                     <constraint firstItem="hLO-rb-7ao" firstAttribute="centerX" secondItem="abD-g6-4Wl" secondAttribute="centerX" id="ZMo-sl-ARd"/>
                                     <constraint firstAttribute="bottom" secondItem="hLO-rb-7ao" secondAttribute="bottom" constant="5" id="dNk-DQ-l0V"/>
-                                    <constraint firstItem="hLO-rb-7ao" firstAttribute="centerY" secondItem="kuW-2i-mrV" secondAttribute="centerY" id="j78-vD-hU7"/>
-                                    <constraint firstItem="kuW-2i-mrV" firstAttribute="leading" secondItem="abD-g6-4Wl" secondAttribute="leading" constant="15" id="jKx-hg-Czh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gj5-y1-qK8" customClass="FancyView" customModule="Devslopes_Social" customModuleProvider="target">
@@ -347,6 +345,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNd-Bf-oLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Bbh-bC-8vO">
+                    <connections>
+                        <action selector="signOutBtnPressed:" destination="fWC-Ow-QGz" id="Rij-0w-DUD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="876" y="116.49175412293854"/>
         </scene>
