@@ -174,15 +174,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gj5-y1-qK8" customClass="FancyView" customModule="Devslopes_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="65" width="375" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="uXE-wL-rgk" customClass="CircleView" customModule="Devslopes_Social" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="49" height="49"/>
-                                        <color key="backgroundColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="0.69413527397260277" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="49" id="2Zw-JW-P7C"/>
-                                            <constraint firstAttribute="width" constant="49" id="jxp-Dq-1U7"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8s-ZM-WY3" customClass="FancyButton" customModule="Devslopes_Social" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8s-ZM-WY3" customClass="FancyButton" customModule="Devslopes_Social" customModuleProvider="target">
                                         <rect key="frame" x="315" y="17" width="52" height="30"/>
                                         <color key="backgroundColor" red="0.08235294118" green="0.39607843139999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -195,24 +187,42 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's on your maind?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM6-Fm-kY3">
-                                        <rect key="frame" x="65" y="8" width="242" height="49"/>
+                                        <rect key="frame" x="69" y="8" width="237.5" height="49"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEj-zr-gol">
+                                        <rect key="frame" x="8" y="7" width="51" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="9lE-L4-cTB"/>
+                                            <constraint firstAttribute="width" constant="51" id="HFC-5v-1WF"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="imagePickerAdd:" destination="fWC-Ow-QGz" eventType="touchUpInside" id="XhK-Ed-skm"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="XO6-gZ-tm7" customClass="CircleView" customModule="Devslopes_Social" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="7" width="51" height="51"/>
+                                        <color key="backgroundColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="0.69413527399999997" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="GoC-GV-uPS"/>
+                                            <constraint firstAttribute="width" constant="51" id="us4-J6-aEb"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="uXE-wL-rgk" secondAttribute="bottom" constant="8" id="0Lg-se-PzQ"/>
-                                    <constraint firstItem="uXE-wL-rgk" firstAttribute="leading" secondItem="gj5-y1-qK8" secondAttribute="leading" constant="8" id="5du-xb-PjG"/>
-                                    <constraint firstItem="wM6-Fm-kY3" firstAttribute="centerY" secondItem="uXE-wL-rgk" secondAttribute="centerY" id="6Qi-ab-E9Z"/>
-                                    <constraint firstItem="f8s-ZM-WY3" firstAttribute="centerY" secondItem="uXE-wL-rgk" secondAttribute="centerY" id="9xy-pe-EzD"/>
-                                    <constraint firstItem="uXE-wL-rgk" firstAttribute="top" secondItem="gj5-y1-qK8" secondAttribute="top" constant="8" id="bCf-HG-W0c"/>
-                                    <constraint firstItem="wM6-Fm-kY3" firstAttribute="leading" secondItem="uXE-wL-rgk" secondAttribute="trailing" constant="8" id="hwH-uO-e8L"/>
-                                    <constraint firstItem="uXE-wL-rgk" firstAttribute="leading" secondItem="gj5-y1-qK8" secondAttribute="leading" constant="8" id="lTJ-KR-TVh"/>
+                                    <constraint firstItem="LEj-zr-gol" firstAttribute="leading" secondItem="gj5-y1-qK8" secondAttribute="leading" constant="8" id="34p-jd-m7j"/>
+                                    <constraint firstAttribute="bottom" secondItem="XO6-gZ-tm7" secondAttribute="bottom" constant="7" id="Epl-Hu-qlZ"/>
+                                    <constraint firstItem="XO6-gZ-tm7" firstAttribute="top" secondItem="gj5-y1-qK8" secondAttribute="top" constant="7" id="PWa-KJ-0cV"/>
+                                    <constraint firstItem="LEj-zr-gol" firstAttribute="top" secondItem="gj5-y1-qK8" secondAttribute="top" constant="7" id="b7M-R7-KIc"/>
+                                    <constraint firstItem="XO6-gZ-tm7" firstAttribute="leading" secondItem="gj5-y1-qK8" secondAttribute="leading" constant="8" id="km1-DZ-Dz6"/>
                                     <constraint firstItem="wM6-Fm-kY3" firstAttribute="top" secondItem="gj5-y1-qK8" secondAttribute="top" constant="8" id="liI-M2-gGs"/>
                                     <constraint firstAttribute="bottom" secondItem="wM6-Fm-kY3" secondAttribute="bottom" constant="8" id="mdh-JP-4s4"/>
                                     <constraint firstAttribute="trailing" secondItem="f8s-ZM-WY3" secondAttribute="trailing" constant="8" id="r6p-J5-W3p"/>
+                                    <constraint firstAttribute="bottom" secondItem="LEj-zr-gol" secondAttribute="bottom" constant="7" id="tyt-0L-LUV"/>
+                                    <constraint firstItem="wM6-Fm-kY3" firstAttribute="leading" secondItem="LEj-zr-gol" secondAttribute="trailing" constant="10" id="uzb-d1-8Mb"/>
                                     <constraint firstAttribute="height" constant="65" id="wU7-km-dNI"/>
                                     <constraint firstItem="f8s-ZM-WY3" firstAttribute="leading" secondItem="wM6-Fm-kY3" secondAttribute="trailing" constant="8" id="zYK-of-xDv"/>
                                 </constraints>
@@ -340,6 +350,7 @@
                         <viewLayoutGuide key="safeArea" id="b9p-5R-6ma"/>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="XO6-gZ-tm7" id="jcQ-ry-gKK"/>
                         <outlet property="tableView" destination="7dG-dM-ZeM" id="NHP-cP-MP7"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="zNL-L2-Bmk"/>
                     </connections>

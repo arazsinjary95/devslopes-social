@@ -10,17 +10,25 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageAdd: UIImageView!
+    
+    
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         DataService.instance.REF_POSTS.observe(.value) { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
@@ -57,6 +65,20 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageAdd.image = image
+        } else {
+            print("ImagePicker: a valid image wasn't selscted")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func imagePickerAdd(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     @IBAction func signOutBtnPressed(_ sender: Any) {
         //here when we sign out we want to remove keychain.
         let keychainRemve = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
