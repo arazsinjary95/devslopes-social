@@ -23,7 +23,7 @@ class SignInVC: UIViewController {
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+        if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID) {
             print("Keychain: id found in keychain")
             performSegue(withIdentifier: "goToFeed", sender: nil)
         }
@@ -94,7 +94,7 @@ class SignInVC: UIViewController {
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.instance.createFirebaseDBuser(uid: id, userData: userData)
-        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
         print("Keychain: data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)
     }

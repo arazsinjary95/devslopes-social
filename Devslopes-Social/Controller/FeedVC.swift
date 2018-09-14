@@ -32,6 +32,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.delegate = self
         
         DataService.instance.REF_POSTS.observe(.value) { (snapshot) in
+            
+            self.posts = [] //this for when duplicate posts!
+            
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -62,11 +65,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString){
                 cell.configureCell(post: post, img: img)
-                return cell
+             
             } else {
                 cell.configureCell(post: post)
-                return cell
+                
             }
+            return cell
          } else {
            return PostCell()
         }
@@ -149,7 +153,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBAction func signOutBtnPressed(_ sender: Any) {
         //here when we sign out we want to remove keychain.
-        let keychainRemve = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        let keychainRemve = KeychainWrapper.defaultKeychainWrapper.removeObject(forKey: KEY_UID)
         print("Keychain: id removed from keychain - \(keychainRemve)")
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)

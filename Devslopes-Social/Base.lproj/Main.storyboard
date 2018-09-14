@@ -328,6 +328,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="caption" destination="XdZ-Tn-AXV" id="kNm-XF-nZj"/>
+                                            <outlet property="likeImg" destination="znx-L4-gvn" id="fpA-Fy-xaL"/>
                                             <outlet property="likesLbl" destination="LGg-YG-f3g" id="OQs-nZ-kUa"/>
                                             <outlet property="postImg" destination="o0d-4B-KTk" id="ydL-WD-HLN"/>
                                             <outlet property="profileImg" destination="Idg-Yv-CvK" id="OBO-9v-Rfh"/>
